@@ -13,11 +13,15 @@ function clicker(el) {
         counterDeadMole.textContent ++;
         if (counterDeadMole.textContent == "10") {
             alert ("Победа");
+            counterDeadMole.textContent = "0";
+            counterMisses.textContent = "0";
         }
     }   else {
         counterMisses.textContent ++;
         if (counterMisses.textContent == "10") {
             alert ("Поздравь крота");
+            counterDeadMole.textContent = "0";
+            counterMisses.textContent = "0"
         }
     }
 }
