@@ -17,7 +17,24 @@ class Game {
   }
 
   registerEvents() {
-    /*
+    document.addEventListener("keydown", pressKey);
+    let symbolOnDocument = this;
+    let index = 0;
+
+    function pressKey(elem) {
+      let symbols = document.querySelectorAll(".symbol");
+
+      if (elem.key.toLowerCase() == symbols[index].textContent) {
+        symbolOnDocument.success();
+        index ++;
+          if (index == symbols.length) {
+              index = 0;
+        } 
+      } else {
+        symbolOnDocument.fail();
+      }
+      }
+      /*
       TODO:
       Написать обработчик события, который откликается
       на каждый введённый символ.
