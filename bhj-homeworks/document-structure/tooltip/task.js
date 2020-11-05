@@ -10,7 +10,6 @@ function openTitle(el) {
     el.preventDefault();
     element = el.target;
     if (element.lastElementChild) {
-        console.log(element, element.lastElementChild);
         element.removeChild(element.childNodes[1]);
         status = false;
         return;
